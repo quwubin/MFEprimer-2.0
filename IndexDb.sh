@@ -35,6 +35,7 @@ echo "Step 2/3: faToTwoBit done."
 echo "Step 3/3: Index begin ..."
 
 $MFEHOME/chilli/mfe_index_db.py -f $fasta_file.unifasta -k $k
+chmod 777 $fasta_file.uni
 
 echo "Step 3/3: Index done"
 
