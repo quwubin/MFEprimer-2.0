@@ -1,6 +1,11 @@
 MFEprimer
 =================
 
+A fast and thermodynamics-based PCR primer specificity checking program
+
+Introduction
+-----------
+
 MFEprimer [v2.0] is a program to help the biologist to check the primer specificity 
 against the whole genomic DNA and mRNA/cDNA database easily and quickly. It uses the 
 k-mer index algorithm to speed up the primer binding sites searching process, and 
@@ -42,10 +47,10 @@ Installation and test
   1. `mv quwubin-MFEprimer-XXXXXXX.zip $HOME/local/`   # You can put it anywhere
   2. `cd $HOME/local/`  # Go the place
   3. `unzip quwubin-MFEprimer-XXXXXXX.zip`  # Unzip the file
-  4. [Optional] mv quwubin-MFEprimer-XXXXXXX MFEprimer  # Rename to normal MFEprimer
-  5. cd MFEprimer/test/  # change to the test directory 
-  6. ../IndexDb.sh test.rna   # Index the database, it will create three files with suffix: .2bit .uni and .sqlite3.db.
-  7. ../MFEprimer.py -i p.fa -d test.rna   # Run MFEprimer and you will get the results if not errors found.
+  4. `mv quwubin-MFEprimer-XXXXXXX MFEprimer`  # Rename to normal MFEprimer
+  5. `cd MFEprimer/test/`  # change to the test directory 
+  6. `../IndexDb.sh test.rna`   # Index the database, it will create three files with suffix: .2bit .uni and .sqlite3.db.
+  7. `../MFEprimer.py -i p.fa -d test.rna`   # Run MFEprimer and you will get the results if not errors found.
   8. Done. Good Luck.
 
 Preparing the database
