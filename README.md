@@ -56,7 +56,7 @@ Installation and test
 Preparing the database
 ----------
 
-  0. Index the database needs large memory and disk space. For example, it will need about 12 GB memory 
+  0. Index a database usually needs large memory and disk space. For example, it will need about 12 GB memory 
 and 80 GB disk space when indexing a human genome database with size of 3 GB in a 64bit Linux server. 
 But for the custom database, which usually in 
 small size (MB level), a personal computer with 2 GB memory may work well. Anyway, I recommended users
