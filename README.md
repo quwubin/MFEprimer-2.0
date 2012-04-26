@@ -27,29 +27,28 @@ Command-line: [download the latest release](https://github.com/quwubin/MFEprimer
 usually named "quwubin-MFEprimer-XXXXXXX.zip".
 
 
-Installation
+System requirement
 -----------
 
-# System requirement
-
-  * *nix, Mac (not test)
+  * Linux, Mac (not test, but it should support)
 
   * Python (>= 2.7)
 
   * psutil: download from here (http://code.google.com/p/psutil/)
 
-# Installation and test
+Installation and test
+-----------
 
-  1. mv quwubin-MFEprimer-XXXXXXX.zip $HOME/local/   # You can put it anywhere
-  2. cd $HOME/local/  # Go the place
-  3. unzip quwubin-MFEprimer-XXXXXXX.zip  # Unzip the file
+  1. `mv quwubin-MFEprimer-XXXXXXX.zip $HOME/local/`   # You can put it anywhere
+  2. `cd $HOME/local/`  # Go the place
+  3. `unzip quwubin-MFEprimer-XXXXXXX.zip`  # Unzip the file
   4. [Optional] mv quwubin-MFEprimer-XXXXXXX MFEprimer  # Rename to normal MFEprimer
   5. cd MFEprimer/test/  # change to the test directory 
   6. ../IndexDb.sh test.rna   # Index the database, it will create three files with suffix: .2bit .uni and .sqlite3.db.
   7. ../MFEprimer.py -i p.fa -d test.rna   # Run MFEprimer and you will get the results if not errors found.
   8. Done. Good Luck.
 
-Versioning
+Preparing the database
 ----------
 
 For transparency and insight into our release cycle, and for striving to maintain backward compatibility, Bootstrap will be maintained under the Semantic Versioning guidelines as much as possible.
