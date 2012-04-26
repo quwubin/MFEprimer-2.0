@@ -95,10 +95,10 @@ Copyright and license
 ---------------------
 
 Copyright (c) 2008-2012. Wubin Qu (quwubin@gmail.com) and 
-Chenggang Zhang (zhangcg@bmi.ac.cn), Beijing Institute of Radiation Medicine.
+Chenggang Zhang (zhangcg@bmi.ac.cn, zcgweb@gmail.com), Beijing Institute of Radiation Medicine.
 
 MFEprimer (all the versions) source and executables are freely available for academic, 
 nonprofit and personal use. Commercial licensing information please contact 
-Dr. Chenggang Zhang (zhangcg@bmi.ac.cn).
+Dr. Chenggang Zhang (zhangcg@bmi.ac.cn, zcgweb@gmail.com).
 
 MFEprimer source may be downloaded from "https://github.com/quwubin/MFEprimer".
