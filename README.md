@@ -59,7 +59,7 @@ Preparing the database
   0. Index a database usually needs large memory and disk space. For example, it will need about 12 GB memory 
 and 80 GB disk space when indexing a human genome database with size of 3 GB in a 64bit Linux server. 
 But for the custom database, which usually in 
-small size (MB level), a personal computer with 2 GB memory may work well. Anyway, I recommended users
+small size (MB level), a personal computer with 2 GB memory may work well. Anyway, I recommend users to
 choose our server (http://biocompute.bmi.ac.cn/CZlab/MFEprimer-2.0/) first when checking the specificity of primers
 against public databases, such as human, mouse etc. 
   1. Preparing your custom database in FASTA-format and named it like "viruses.genomic" or "human.rna".
