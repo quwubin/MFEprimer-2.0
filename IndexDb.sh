@@ -31,7 +31,13 @@ $MFEHOME/chilli/UniFastaFormat.py -i $fasta_file
 
 echo "Step 1/3: UniFasta done."
 
-$MFEHOME/bin/faToTwoBit $fasta_file.unifasta $fasta_file.2bit
+if [ `getconf LONG_BIT` == 64 ]
+then
+    $MFEHOME/bin/64bit/faToTwoBit $fasta_file.unifasta $fasta_file.2bit
+else
+    $MFEHOME/bin/32bit/faToTwoBit $fasta_file.unifasta $fasta_file.2bit
+fi
+
 
 echo "Step 2/3: faToTwoBit done."
 
