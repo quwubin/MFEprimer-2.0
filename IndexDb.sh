@@ -9,6 +9,10 @@ if [ $# == 2 ]
 then
     fasta_file=$1
     k=$2
+elif [ $# == 1 ]
+then
+    fasta_file=$1
+    k=9
 else
     echo Usage:  
     echo
