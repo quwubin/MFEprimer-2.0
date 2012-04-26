@@ -83,7 +83,7 @@ https://github.com/quwubin/MFEprimer/issues
 Getting help
 ------------
 
-Wubin Qu <quwubin@gmail.com>
+Email to Wubin Qu (quwubin@gmail.com).
 
 
 Authors
