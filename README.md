@@ -56,21 +56,17 @@ Installation and test
 Preparing the database
 ----------
 
-For transparency and insight into our release cycle, and for striving to maintain backward compatibility, Bootstrap will be maintained under the Semantic Versioning guidelines as much as possible.
-
-Releases will be numbered with the follow format:
-
-`<major>.<minor>.<patch>`
-
-And constructed with the following guidelines:
-
-* Breaking backward compatibility bumps the major (and resets the minor and patch)
-* New additions without breaking backward compatibility bumps the minor (and resets the patch)
-* Bug fixes and misc changes bumps the patch
-
-For more information on SemVer, please visit http://semver.org/.
-
-
+  0. Index the database needs large memory and disk space. Indexing a human genome database (=~ 3 GB) in a 64bit
+Linux server, needs about 12 GB memory and 80 GB disk space. But for the custom database, which usually in 
+small size (MB level), normal personal computer (>= 2 GB memory) may work well. Anyway, I recommended users
+choose our server (http://biocompute.bmi.ac.cn/CZlab/MFEprimer-2.0/) first when checking the specificity of primers
+against public databases, such as human, mouse etc. 
+  1. Preparing your custom database in FASTA-format and named it like "viruses.genomic" or "human.rna".
+The name convention is "species.type".
+  2. If your database is "viruses.genomic" and in "$HOME/db" directory, then type `$HOME/local/MFEprimer/IndexDb.sh
+$HOME/db/viruses.genomic`. Please be patient, the indexing process may take several hours. 
+  3. Type `$HOME/local/MFEprimer/MFEprimer.py -i YourPrimer.fasta -d $HOME/db/viruses.genomic` for checking the 
+specificity of primers against the custom (here is viruses.genomic) database.
 
 Bug tracker
 -----------
