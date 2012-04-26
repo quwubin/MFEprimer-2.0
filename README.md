@@ -82,6 +82,12 @@ Getting help
 
 Email to Wubin Qu (quwubin@gmail.com).
 
+Citation
+------------
+
+>Wubin Qu, Zhiyong Shen, Dongsheng Zhao, Yi Yang and Chenggang Zhang. (2009) 
+MFEprimer: multiple factor evaluation of the specificity of PCR primers, 
+Bioinformatics, 25(2), 276-278.
 
 Authors
 -------
