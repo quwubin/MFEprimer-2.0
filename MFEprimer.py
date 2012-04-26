@@ -15,6 +15,7 @@ import time
 import math
 import textwrap
 import subprocess
+import platform
 import argparse
 from operator import itemgetter
 import sqlite3
@@ -28,7 +29,7 @@ from chilli import FastaFormatParser
 from chilli import DegenerateSeqConvetor
 
 src_path = os.path.split(os.path.realpath(sys.argv[0]))[0]
-bin_path = os.path.join(src_path, 'bin')
+bin_path = os.path.join(src_path, 'bin', platform.architecture()[0])
 
 global degenerate
 degenerate = 'no'
