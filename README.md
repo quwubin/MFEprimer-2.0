@@ -1,4 +1,4 @@
-MFEprimer
+MFEprimer-2.0
 =================
 
 A fast and thermodynamics-based PCR primer specificity checking program
@@ -35,7 +35,7 @@ usually named "quwubin-MFEprimer-XXXXXXX.zip".
 System requirement
 -----------
 
-  * Linux, Mac (not test, but it should support)
+  * Linux, Mac (not test, you may contact me if you want MFEprimer to run on Mac)
 
   * Python (>= 2.7)
 
@@ -45,7 +45,7 @@ Installation and test
 -----------
 
   1. `mv quwubin-MFEprimer-XXXXXXX.zip $HOME/local/`   # You can put it anywhere
-  2. `cd $HOME/local/`  # Go the place
+  2. `cd $HOME/local/`  # Go to the place
   3. `unzip quwubin-MFEprimer-XXXXXXX.zip`  # Unzip the file
   4. `mv quwubin-MFEprimer-XXXXXXX MFEprimer`  # Rename to normal MFEprimer
   5. `cd MFEprimer/test/`  # change to the test directory 
@@ -56,15 +56,16 @@ Installation and test
 Preparing the database
 ----------
 
-  0. Index the database needs large memory and disk space. Indexing a human genome database (=~ 3 GB) in a 64bit
-Linux server, needs about 12 GB memory and 80 GB disk space. But for the custom database, which usually in 
-small size (MB level), normal personal computer (>= 2 GB memory) may work well. Anyway, I recommended users
+  0. Index a database usually needs large memory and disk space. For example, it will need about 12 GB memory 
+and 80 GB disk space when indexing a human genome database with size of 3 GB in a 64bit Linux server. 
+But for the custom database, which usually in 
+small size (MB level), a personal computer with 2 GB memory may work well. Anyway, I recommend users to
 choose our server (http://biocompute.bmi.ac.cn/CZlab/MFEprimer-2.0/) first when checking the specificity of primers
 against public databases, such as human, mouse etc. 
   1. Preparing your custom database in FASTA-format and named it like "viruses.genomic" or "human.rna".
 The name convention is "species.type".
   2. If your database is "viruses.genomic" and in "$HOME/db" directory, then type `$HOME/local/MFEprimer/IndexDb.sh
-$HOME/db/viruses.genomic`. Please be patient, the indexing process may take several hours. 
+$HOME/db/viruses.genomic`. Please be patient, the indexing process may take several minutes, even hours. 
   3. Type `$HOME/local/MFEprimer/MFEprimer.py -i YourPrimer.fasta -d $HOME/db/viruses.genomic` for checking the 
 specificity of primers against the custom (here is viruses.genomic) database.
 
@@ -81,6 +82,12 @@ Getting help
 
 Email to Wubin Qu (quwubin@gmail.com).
 
+Citation
+------------
+
+>Wubin Qu, Zhiyong Shen, Dongsheng Zhao, Yi Yang and Chenggang Zhang. (2009) 
+MFEprimer: multiple factor evaluation of the specificity of PCR primers, 
+Bioinformatics, 25(2), 276-278.
 
 Authors
 -------
@@ -90,15 +97,18 @@ Authors
 + http://quwubin.sinaapp.com
 + http://github.com/quwubin
 
+**Chenggang Zhang**
+
++ zhangcg@bmi.ac.cn
 
 Copyright and license
 ---------------------
 
 Copyright (c) 2008-2012. Wubin Qu (quwubin@gmail.com) and 
-Chenggang Zhang (zhangcg@bmi.ac.cn), Beijing Institute of Radiation Medicine.
+Chenggang Zhang (zhangcg@bmi.ac.cn, zcgweb@gmail.com), Beijing Institute of Radiation Medicine.
 
 MFEprimer (all the versions) source and executables are freely available for academic, 
 nonprofit and personal use. Commercial licensing information please contact 
-Dr. Chenggang Zhang (zhangcg@bmi.ac.cn).
+Dr. Chenggang Zhang (zhangcg@bmi.ac.cn, zcgweb@gmail.com).
 
 MFEprimer source may be downloaded from "https://github.com/quwubin/MFEprimer".
