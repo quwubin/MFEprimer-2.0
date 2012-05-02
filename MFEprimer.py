@@ -258,7 +258,7 @@ def format_output_primer(amp_list, oligos, options, start_time, session_dir):
     fa_file = []
     sn = 0
     #amp_list.append([amp_len, ave_Tm, p, m, ppc, amp_graphic, mid_seq, real_hid, hdesc])
-    amp_list.sort(key=itemgetter(0, 2), reverse=True)
+    amp_list.sort(key=itemgetter(1, 2), reverse=True)
     for ave_Tm, ppc, amp_len, amp in amp_list:
         sn = sn + 1
         hid = amp['real_hid']
@@ -819,7 +819,7 @@ def tab_out(amp_list, oligos, options, start_time, session_dir):
     # amp_id, fp_id, rp_id, ppc, size, gc, fp_tm, fp_dg, rp_tm, rp_dg, seq, hit_id
     options.outfile.write("AmpID\tFpID\tRpID\tHitID\tPPC\tSize\tAmpGC\tFpTm\tRpTm\tFpDg\tRpDg\tBindingStart\tBindingStop\tAmpSeq\n")
     sn = 0
-    amp_list.sort(key=itemgetter(0, 2), reverse=True)
+    amp_list.sort(key=itemgetter(1, 2), reverse=True)
     for ave_Tm, ppc, amp_len, amp in amp_list:
         sn = sn + 1
 

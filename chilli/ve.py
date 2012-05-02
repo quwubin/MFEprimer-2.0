@@ -45,7 +45,7 @@ def draw_title(ctx, height, width):
 
 def draw_foot(ctx, height, width, agarose, product_number):
     '''Draw title'''
-    title = 'M: Marker DL2000, %s agarose gel' % agarose
+    title = 'M: Marker DL2000, %s%% agarose gel' % agarose
 
     title_length = 0
     for i in range(len(title)):
@@ -110,7 +110,7 @@ def draw_virtual_elec(ctx, height, width, idname_size, agarose, product_number):
 	    y1 = y1*13 - 40# 13 is just a amplificationfactor
 	    ctx.move_to(x+10, y1)
 	    ctx.set_line_width(6)
-	    ctx.line_to(x + 50, y1)
+	    ctx.line_to(x + 60, y1)
 
 	    x2 = 30 + 80 + 90 * (product_number + 1) + 10
 	    ctx.move_to(x2, y1)
@@ -143,10 +143,10 @@ def draw_virtual_elec(ctx, height, width, idname_size, agarose, product_number):
     mark_size_dict = {
 	2000 : '2000 bp',
 	1000 : '1000 bp',
-	750  : ' 750 bp',
-	500  : ' 500 bp',
-	250  : ' 250 bp',
-	100  : ' 100 bp',
+	750  : '  750 bp',
+	500  : '  500 bp',
+	250  : '  250 bp',
+	100  : '  100 bp',
     }
     
     ctx.set_source_rgb(1, 1, 1)
