@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>MFEprimer-2.0 by quwubin</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>MFEprimer-2.0</h1>
+        <p>A fast thermodynamics-based program for checking PCR primer specificity</p>
+        <p class="view"><a href="https://github.com/quwubin/MFEprimer">View the Project on GitHub <small>quwubin/MFEprimer</small></a></p>
+        <ul>
+          <li><a href="https://github.com/quwubin/MFEprimer/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/quwubin/MFEprimer/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/quwubin/MFEprimer">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>Introduction</h2>
+
+<p>Evaluating the specificity of PCR primers is an essential step in PCR primer design. The MFEprimer-2.0 server allows users to check primer specificity against genomic DNA and mRNA/cDNA sequence databases quickly and easily. MFEprimer-2.0 uses a k-mer index algorithm to accelerate the search process for primer binding sites and uses thermodynamics to evaluate binding stability between each primer and its DNA template. Several important characteristics such as the sequence, melting temperature and size of each amplicon, either specific or non-specific, are reported on the results page. Based on these characteristics and the user-friendly output, users can readily draw conclusions about the specificity of PCR primers. Analyses for degenerate primers and multiple PCR primers are also supported in MFEprimer-2.0. In addition, the databases supported by MFEprimer-2.0 are comprehensive, and custom databases can also be supported on request. The MFEprimer-2.0 server does not require a login and is freely available at <a href="http://biocompute.bmi.ac.cn/CZlab/MFEprimer-2.0">http://biocompute.bmi.ac.cn/CZlab/MFEprimer-2.0</a>. </p>
+
+<h2>Who need a local version of MFEprimer?</h2>
+
+<p>MFEprimer-2.0 has a web server version and a command-line version. <a href="http://biocompute.bmi.ac.cn/CZlab/MFEprimer-2.0/">The web server host in our server</a> may meet the need of most users. While in the following conditions, users may need a command-line version or a local mirror of MFEprimer-2.0 web server:</p>
+
+<ol>
+<li>Private or custom database;</li>
+<li>Limited Internet access;</li>
+<li>Use MFEprimer-2.0 as a part of primer design software;</li>
+<li>A lot of primers to be evaluated and the task is beyond our server capability. </li>
+</ol><h2>Versions</h2>
+
+<ul>
+<li>Command-line: <a href="https://github.com/quwubin/MFEprimer/zipball/master">download the latest release</a>, 
+usually named "quwubin-MFEprimer-XXXXXXX.zip".</li>
+<li>Local server (same as <a href="http://biocompute.bmi.ac.cn/CZlab/MFEprimer-2.0/):">http://biocompute.bmi.ac.cn/CZlab/MFEprimer-2.0/):</a> <a href="https://github.com/quwubin/MFEprimerWeb/zipball/master">download the latest release</a>, usually named "quwubin-MFEprimerWeb-XXXXXXX.zip".</li>
+</ul><h2>Download and installation</h2>
+
+<p>Please reading the <a href="https://github.com/quwubin/MFEprimer/wiki/Manual">Manual</a> for details.</p>
+
+<h2>Bug tracker</h2>
+
+<p>Have a bug? Please create an issue here on GitHub!</p>
+
+<p><a href="https://github.com/quwubin/MFEprimer/issues">https://github.com/quwubin/MFEprimer/issues</a></p>
+
+<h2>Getting help</h2>
+
+<p>Email to Wubin Qu (<a href="mailto:quwubin@gmail.com">quwubin@gmail.com</a>).</p>
+
+<h2>Citation</h2>
+
+<blockquote>
+<p>Wubin Qu, Zhiyong Shen, Dongsheng Zhao, Yi Yang and Chenggang Zhang. (2009) 
+MFEprimer: multiple factor evaluation of the specificity of PCR primers, 
+Bioinformatics, 25(2), 276-278.</p>
+</blockquote>
+
+<h2>Authors</h2>
+
+<p><strong>Wubin Qu</strong></p>
+
+<ul>
+<li><a href="http://quwubin.sinaapp.com">http://quwubin.sinaapp.com</a></li>
+<li><a href="http://github.com/quwubin">http://github.com/quwubin</a></li>
+</ul><p><strong>Chenggang Zhang</strong></p>
+
+<ul>
+<li><a href="mailto:zhangcg@bmi.ac.cn">zhangcg@bmi.ac.cn</a></li>
+</ul><h2>Copyright and license</h2>
+
+<p>Copyright (c) 2008-2012. Wubin Qu (<a href="mailto:quwubin@gmail.com">quwubin@gmail.com</a>) and 
+Chenggang Zhang (<a href="mailto:zhangcg@bmi.ac.cn">zhangcg@bmi.ac.cn</a>, <a href="mailto:zcgweb@gmail.com">zcgweb@gmail.com</a>), Beijing Institute of Radiation Medicine.</p>
+
+<p>MFEprimer (all the versions) source and executables are freely available for academic, 
+nonprofit and personal use. Commercial licensing information please contact 
+Dr. Chenggang Zhang (<a href="mailto:zhangcg@bmi.ac.cn">zhangcg@bmi.ac.cn</a>, <a href="mailto:zcgweb@gmail.com">zcgweb@gmail.com</a>).</p>
+
+<p>MFEprimer source may be downloaded from "<a href="https://github.com/quwubin/MFEprimer">https://github.com/quwubin/MFEprimer</a>".</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/quwubin">quwubin</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-4030556-21");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
