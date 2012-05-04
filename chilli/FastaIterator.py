@@ -52,8 +52,11 @@ def parse(fh):
 
     # Remove the comment and blank lines before the first record
     while True:
-        line = fh.readline().strip()
+        line = fh.readline()
         if not line: return # Blank line
+	
+	line = line.strip()
+
         if line.startswith('>'):
             break
 
@@ -64,15 +67,21 @@ def parse(fh):
         id, sep, desc = line[1:].partition(' ')
 
         seq_lines = []
-        line = fh.readline().strip()
+        line = fh.readline()
         while True:
             if not line: break
+
+	    line = line.strip()
 
             if line.startswith('>'):
                 break
 
+	    if not line: 
+		line = fh.readline()
+		continue
+
             seq_lines.append(line.replace(' ', '').replace("\r", ''))
-            line = fh.readline().strip()
+            line = fh.readline()
 
         yield Iterator(id, desc, ''.join(seq_lines))
 
@@ -92,8 +101,10 @@ def main ():
     '''Main'''
     infile = sys.argv[1]
     records = parse(open(infile))
+    i = 0
     for a in records:
-        print a.id, a.desc
+	i += 1
+        print a.id, a.desc, a.size, i
         print a.seq
 
 
