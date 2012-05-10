@@ -3,7 +3,7 @@
 # Index database for MFEprimer-2.0
 # Wubin Qu <quwubin@gmail.com>
 
-MFEHOME=$(dirname $(which ${0}))
+MFEHOME=$(dirname $(readlink -f "$0"))
 
 if [ $# == 2 ]
 then
