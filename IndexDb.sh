@@ -3,7 +3,12 @@
 # Index database for MFEprimer-2.0
 # Wubin Qu <quwubin@gmail.com>
 
-MFEHOME=$(dirname $(readlink -f "$0"))
+if [[ $OSTYPE == linux-gnu ]]
+then
+    MFEHOME=$(dirname $(readlink -f "$0"))
+else
+    MFEHOME=$(dirname $(which ${0}))
+fi 
 
 if [ $# == 2 ]
 then
