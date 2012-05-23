@@ -20,6 +20,7 @@ import argparse
 from operator import itemgetter
 import sqlite3
 from pprint import pprint
+import shutil
 
 from chilli import Seq
 from chilli import SeqCheck
@@ -892,6 +893,13 @@ def main():
 	tab_out(amp_list, oligos, options, start_time, session_dir)
     else:
 	format_output_primer(amp_list, oligos, options, start_time, session_dir)
+
+    # Clean session tmp directory
+    try:
+      shutil.rmtree(session_dir)
+    except:
+      pass
+
 
 
 if __name__ == '__main__':
