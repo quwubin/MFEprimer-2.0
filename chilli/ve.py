@@ -171,7 +171,7 @@ def paint(size_list, agarose, pic_path):
     '''Paint the virtual electrophotogram '''
     size_list = list(set(size_list))
     size_list.sort()
-    idname_size = [(str(size), size) for size in size_list]
+    idname_size = [(str(size), int(size)) for size in size_list]
 
     height = 750
     # Marker line width: 80
@@ -202,7 +202,9 @@ def paint(size_list, agarose, pic_path):
     #return name
 
 def main ():
-    size_list = [100, 200, 300, 400, 500]
+    size_list = [100, 114, 128, 144, 161, 179, 198, 219, 242, 266, 292, 320, 350, 383, 418, 456, 497, 541, 588, 639, 694, 753, 816, 885, 958, 1038, 1123, 1215, 1314, 1421, 1536, 1660, 1793]
+    #size_list = [80, 93, 107, 122, 139, 157, 177, 198, 221, 246, 274, 303, 335, 370, 407, 448, 493, 541, 593, 650, 711, 778, 850, 928, 1013, 1106, 1206, 1314, 1432, 1560, 1699, 1849, 2013]
+    size_list = [90, 104, 119, 135, 151, 169, 189, 209, 231, 255, 283, 313, 346, 381, 416, 454, 495, 543, 595, 647, 708, 768, 833, 910, 993, 1076, 1173, 1269, 1383, 1507, 1641, 1787, 1944]
     agarose = 1
     pic_path = 've.png'
     paint(size_list, agarose, pic_path)
