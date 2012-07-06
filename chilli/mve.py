@@ -59,7 +59,7 @@ def draw_foot(ctx, height, width, agarose, product_number):
 
     ctx.stroke()
 
-    title = '1-%s: PCR amplicons' % (product_number + 1)
+    title = '1-%s: PCR amplicons' % (product_number)
     title_length = 0
     for i in range(len(title)):
         title_length = title_length + CNW.font20[title[i]]
