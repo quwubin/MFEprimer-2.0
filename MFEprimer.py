@@ -238,7 +238,7 @@ def format_output_primer(amp_list, oligos, options, start_time, session_dir):
     #out.append('        %s sequences' % (len(fcdict)))
     out.append(linesep)
 
-    out.append('Reports Begining'.ljust(80, '.'))
+    out.append('Reports Beginning'.ljust(80, '.'))
     out.append(linesep * 2)
 
     amp_num = len(amp_list)
