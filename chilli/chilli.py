@@ -486,16 +486,14 @@ def sn_creator_no_drop_back(sn_cutoff_list):
 
         yield sn_list
 
-def set_cache(data, filename):
-    '''Filename should be full path'''
-    import os
-    import shelve
+def get_cache_json(filename):
+    import json
+    with open(filename) as fp:
+        data = json.load(fp)
 
-    d = shelve.open(filename)
-    d[os.path.basename(filename)] = data
-    d.close()
+    return data
 
-def get_cache(filename):
+def get_cache_shelve(filename):
     '''Filename should be full path'''
     import os
     import shelve
@@ -503,6 +501,20 @@ def get_cache(filename):
     d = shelve.open(filename)
     data = d[os.path.basename(filename)]
     d.close()
+
+    return data
+
+def set_cache(data, filename):
+    import json
+    with open(filename, 'wb') as fp:
+        json.dump(data, fp)
+
+def get_cache(filename):
+    '''Filename should be full path'''
+    try:
+	data = get_cache_json(filename)
+    except:
+	data = get_cache_shelve(filename)
 
     return data
 
