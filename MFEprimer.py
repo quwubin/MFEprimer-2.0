@@ -29,8 +29,18 @@ from chilli import chilli
 from chilli import FastaFormatParser
 from chilli import DegenerateSeqConvetor
 
+def get_os():
+    if platform.system() == 'Darwin':
+        return 'mac'
+    else:
+        return 'linux'
+
+def get_bit():
+    return platform.architecture()[0].replace('bit', '')
+
 src_path = os.path.split(os.path.realpath(sys.argv[0]))[0]
-bin_path = os.path.join(src_path, 'bin', platform.architecture()[0])
+
+bin_path = os.path.join(src_path, 'bin', get_os(), get_bit())
 
 global degenerate
 degenerate = 'no'
@@ -773,7 +783,7 @@ def get_align_seq(seq_list, options, product):
         p_sseq = pts[-p_aseq_len:].upper()
         p_tail = pseq[:-p_aseq_len]
 
-        p_thermo =  TmDeltaG.Cal(p_qseq, Seq.complement(p_sseq), mono_conc=options.mono_conc, diva_conc=options.diva_conc, dntp_conc=options.dntp_conc)
+        p_thermo =  TmDeltaG.Cal(p_qseq, Seq.complement(p_sseq), mono_conc=options.mono_conc, diva_conc=options.diva_conc, dntp_conc=options.dntp_conc, oligo_conc=options.oligo_conc)
         p_DeltaG = p_thermo.DeltaG
         p_Tm = p_thermo.Tm
         if p_Tm < float(options.tm_start) or p_Tm > float(options.tm_stop):
@@ -791,7 +801,7 @@ def get_align_seq(seq_list, options, product):
         else:
             m_tail = mseq[m_aseq_len:]
 
-        m_thermo =  TmDeltaG.Cal(m_qseq, Seq.complement(m_sseq), mono_conc=options.mono_conc, diva_conc=options.diva_conc, dntp_conc=options.dntp_conc)
+        m_thermo =  TmDeltaG.Cal(m_qseq, Seq.complement(m_sseq), mono_conc=options.mono_conc, diva_conc=options.diva_conc, dntp_conc=options.dntp_conc, oligo_conc=options.oligo_conc)
         m_DeltaG = m_thermo.DeltaG
         m_Tm = m_thermo.Tm
         if m_Tm < float(options.tm_start) or m_Tm > float(options.tm_stop):
