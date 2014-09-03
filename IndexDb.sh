@@ -3,6 +3,15 @@
 # Index database for MFEprimer-2.0
 # Wubin Qu <quwubin@gmail.com>
 
+platform='unknown'
+unamestr=`uname`
+echo $unamestr
+if [[ "$unamestr" == 'Linux' ]]; then
+   platform='linux'
+elif [[ "$unamestr" == 'Darwin' ]]; then
+   platform='mac'
+fi
+
 if [[ $OSTYPE == linux-gnu ]]
 then
     MFEHOME=$(dirname $(readlink -f "$0"))
@@ -38,9 +47,9 @@ echo "Step 1/3: UniFasta done."
 
 if [ `getconf LONG_BIT` == 64 ]
 then
-    $MFEHOME/bin/64bit/faToTwoBit $fasta_file.unifasta $fasta_file.2bit
+    $MFEHOME/bin/$platform/64/faToTwoBit $fasta_file.unifasta $fasta_file.2bit
 else
-    $MFEHOME/bin/32bit/faToTwoBit $fasta_file.unifasta $fasta_file.2bit
+    $MFEHOME/bin/$platform/32/faToTwoBit $fasta_file.unifasta $fasta_file.2bit
 fi
 
 
