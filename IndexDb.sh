@@ -5,7 +5,7 @@
 
 platform='unknown'
 unamestr=`uname`
-echo $unamestr
+
 if [[ "$unamestr" == 'Linux' ]]; then
    platform='linux'
 elif [[ "$unamestr" == 'Darwin' ]]; then
