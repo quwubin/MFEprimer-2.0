@@ -51,7 +51,7 @@ def get_memory_percent():
 	exit()
 
     p = psutil.Process(os.getpid())
-    return p.get_memory_percent()
+    return p.memory_percent()
 
 def insert_db(conn, mer_count, plus, minus):
     for mer_id in xrange(mer_count):
