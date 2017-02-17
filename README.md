@@ -3,7 +3,7 @@
 A fast thermodynamics-based program for checking PCR primer specificity 
 
 ## Online server
-* http://mfeprimer.com/
+* http://www.mfeprimer.com/
 * http://biocompute.bmi.ac.cn/CZlab/MFEprimer-2.0/
 
 ## Introduction
