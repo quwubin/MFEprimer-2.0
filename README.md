@@ -218,7 +218,7 @@ MFEprimer: multiple factor evaluation of the specificity of PCR primers,
 
 **Wubin Qu**
 
-+ http://quwubin.sinaapp.com
++ quwubin@gmail.com
 + http://github.com/quwubin
 
 **Chenggang Zhang**
